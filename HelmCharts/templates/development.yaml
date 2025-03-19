@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        project: {{ .Release.Name }}   # Service will look for those PODS Labels!!!
+        project: {{ .Release.Name }}  
     spec:
       containers:
         - name : {{ .Release.Name }}-web
           image: {{ .Values.container.image }}
           ports:
-            - containerPort: 80
+            - containerPort: 8080
