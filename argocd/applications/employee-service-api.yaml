@@ -1,29 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name     : employee-service-api
+  name: employee-service-api
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    name     : in-cluster
-    namespace: app1
+    name: in-cluster
+    namespace: default
   source:
-    path   : "k8s"
-    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
-    targetRevision: HEAD
-    helm:
-      valueFiles:
-      - values_dev.yaml
-      parameters:
-      - name: "container.image"
-        value: adv4000/app1:v3
-
+    path: "k8s"
+    repoURL: "https://github.com/Woogie7/BeautySalon.Deployments.git"
+    targetRevision: main  # Указываем конкретную ветку
   project: default
   syncPolicy:
     automated:
-      prune   : true
+      prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true 
+      - CreateNamespace=true
