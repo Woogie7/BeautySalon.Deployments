@@ -11,7 +11,7 @@ spec:
     namespace: app1
   source:
     path   : "k8s"
-    repoURL: "BeautySalon.Deployments/argocd/root.yaml"
+    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
     targetRevision: HEAD
 
   project: default
