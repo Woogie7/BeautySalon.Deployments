@@ -11,7 +11,7 @@ spec:
     namespace: default
   source:
     chart   : "k8s"
-    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.gitt"
+    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
     targetRevision: HEAD
   project: default
   syncPolicy:
