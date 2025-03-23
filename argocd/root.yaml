@@ -4,14 +4,14 @@ metadata:
   name     : root
   namespace: argocd
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name     : in-cluster
     namespace: argocd
   source:
     path   : "argocd/applications"
-    repoURL: "https://github.com/Woogie7/BeautySalon.Deployments.git"
+    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
     targetRevision: HEAD
   project: default
   syncPolicy:

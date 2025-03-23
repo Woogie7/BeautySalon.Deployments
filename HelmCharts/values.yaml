@@ -1,4 +1,0 @@
-container:
-  image: woogie42/beautysalon.employees.api:v2
-
-replicaCount: 1

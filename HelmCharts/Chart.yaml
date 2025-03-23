@@ -1,5 +1,0 @@
-apiVersion: v2
-name       : App-Employye-Api
-description: My api service Employees for beauty salon
-type       : application
-version    : 0.1.0   # This is the Helm Chart version
