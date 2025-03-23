@@ -1,0 +1,10 @@
+apiVersion: v2
+name       : AppEmployeApiHelmChart
+description: My api employee service
+type       : application
+
+keywords:
+  - apache
+  - http
+  - https
+  - denisastahov
