@@ -9,7 +9,7 @@ spec:
     namespace: default
   source:
     path: "k8s"
-    repoURL: "https://github.com/Woogie7/BeautySalon.Deployments.git"
+    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
     targetRevision: main  # Указываем конкретную ветку
   project: default
   syncPolicy:
