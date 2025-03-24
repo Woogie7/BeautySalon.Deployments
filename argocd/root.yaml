@@ -5,6 +5,11 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: image1=your-registry/employee-service
+    argocd-image-updater.argoproj.io/image1.update-strategy: latest
+    argocd-image-updater.argoproj.io/image1.helm.image-spec: image.repository
+    argocd-image-updater.argoproj.io/image1.helm.image-tag: image.tag
 spec:
   destination:
     name     : in-cluster
