@@ -19,6 +19,6 @@ spec:
             - containerPort: 8080
           env:
             - name: LANG
-              value: "en_US.UTF-8"
+              value: "C.UTF-8"  # <--- ИЗМЕНИТЬ
             - name: LC_ALL
-              value: "en_US.UTF-8"
+              value: "C.UTF-8"
