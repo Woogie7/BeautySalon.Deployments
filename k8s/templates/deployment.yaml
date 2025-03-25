@@ -17,8 +17,3 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 8080
-          env:
-            - name: LANG
-              value: "C.UTF-8"  # <--- ИЗМЕНИТЬ
-            - name: LC_ALL
-              value: "C.UTF-8"
