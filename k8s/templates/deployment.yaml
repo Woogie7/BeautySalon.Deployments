@@ -15,5 +15,11 @@ spec:
       containers:
         - name: {{ .Release.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+            - name: LANG
+              value: ru_RU.UTF-8
+            - name: LC_ALL
+              value: ru_RU.UTF-8
           ports:
             - containerPort: 8080
+          
