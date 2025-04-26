@@ -1,0 +1,10 @@
+apiVersion: v2
+name       : AppBookingApiHelmChart
+description: My api booking service
+type       : application
+version    : 0.1.0
+keywords:
+  - apache
+  - http
+  - https
+  - denisastahov

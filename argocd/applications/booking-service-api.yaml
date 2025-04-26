@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: employee-service-api
+  name: booking-service-api
   namespace: argocd
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     namespace: default
   source:
     repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
-    path: "k8s/employeesHelm"  
+    path: "k8s/bookingHelm"  
     targetRevision: HEAD
     helm:
       valueFiles:
