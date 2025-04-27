@@ -1,8 +1,6 @@
 redis:
   enabled: true
   password: myredispassword
-
 image:
   repository: woogie42/beautysalon.booking.api
-  tag: 
-
+  tag: 14f9e62af59d52c1f47ac40c6cca808838ca0e5c
