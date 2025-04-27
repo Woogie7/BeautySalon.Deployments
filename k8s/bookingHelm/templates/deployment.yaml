@@ -16,6 +16,10 @@ spec:
         - name: {{ .Release.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           env:
+            - name: Redis__ConnectionString
+              value: "{{ .Release.Name }}-redis:6379"
+            - name: Redis__Password
+              value: {{ .Values.redis.password }}
             - name: LANG
               value: ru_RU.UTF-8
             - name: LC_ALL
