@@ -1,12 +1,10 @@
 redis:
   enabled: true
   password: 1234
-
 postgres:
   user: postgres
   password: 1234
   database: BeautySalonBookingDb
 image:
   repository: woogie42/beautysalon.booking.api
-  tag: 
-
+  tag: acb25105629c221fe295cbb4ed4f65f7efd14142
