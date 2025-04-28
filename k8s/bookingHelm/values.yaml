@@ -1,9 +1,9 @@
 redis:
   enabled: true
-  password: 1234
+  password: guest
 postgres:
-  user: postgresasd
-  password: 1234asdas
+  user: postgres
+  password: 1234
   database: BeautySalonBookingDb
 image:
   repository: woogie42/beautysalon.booking.api

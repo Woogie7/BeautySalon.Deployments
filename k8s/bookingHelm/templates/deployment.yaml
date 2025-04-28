@@ -17,7 +17,7 @@ spec:
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           env:
             - name: Redis__ConnectionString
-              value: "{{ .Release.Name }}-redis:6379" 
+              value: "{{ .Release.Name }}-redis:6379,abortConnect=false" 
             - name: Redis__Password
               value: "{{ .Values.redis.password }}"
             
