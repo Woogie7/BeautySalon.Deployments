@@ -20,6 +20,18 @@ spec:
               value: "{{ .Release.Name }}-redis:6379"
             - name: Redis__Password
               value: {{ .Values.redis.password }}
+              
+            - name: POSTGRES_HOST
+              value: "{{ .Release.Name }}-postgres"
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: POSTGRES_USER
+              value: "{{ .Values.postgres.user }}"
+            - name: POSTGRES_PASSWORD
+              value: "{{ .Values.postgres.password }}"
+            - name: POSTGRES_DB
+              value: "{{ .Values.postgres.database }}"
+            
             - name: LANG
               value: ru_RU.UTF-8
             - name: LC_ALL
