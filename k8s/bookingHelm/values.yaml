@@ -7,4 +7,4 @@ postgres:
   database: BeautySalonBookingDb
 image:
   repository: woogie42/beautysalon.booking.api
-  tag: 85820c1a9bb8cff40ecabc45b452314206b6f0c2
+  tag: 14b4701bf2f8c37287b971c5bb4b4aad0ee8ed7c
