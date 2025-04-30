@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rabbitmq
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: default
+  source:
+    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
+    path: "k8s/rabbitmq"
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: fullnameOverride
+          value: rabbitmq
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
