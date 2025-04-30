@@ -8,9 +8,9 @@ spec:
     name: in-cluster
     namespace: default
   source:
-    repoURL: "git@github.com:Woogie7/BeautySalon.Deployments.git"
-    path: "k8s/rabbitmq"
-    targetRevision: HEAD
+    repoURL: "https://charts.bitnami.com/bitnami"
+    chart: rabbitmq
+    targetRevision: "16.0.0"
     helm:
       valueFiles:
         - values.yaml
