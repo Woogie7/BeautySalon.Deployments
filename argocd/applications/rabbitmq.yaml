@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: "https://charts.bitnami.com/bitnami"
     chart: rabbitmq
-    targetRevision: "16.0.0"
+    targetRevision: "4.1.0"
     helm:
       valueFiles:
         - ../../k8s/rabbitmq/values.yaml 
