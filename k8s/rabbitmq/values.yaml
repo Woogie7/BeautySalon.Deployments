@@ -1,8 +1,29 @@
-fullnameOverride: rabbitmq
+replicaCount: 1
+
+image:
+  repository: rabbitmq
+  tag: "3.12-management"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 5672
+  managementPort: 15672
+
+persistence:
+  enabled: true
+  size: 8Gi
+  storageClass: "standard"
+
+resources:
+  requests:
+    memory: "512Mi"
+    cpu: "200m"
+  limits:
+    memory: "2Gi"
+    cpu: "1"
+
 auth:
   username: guest
   password: guest
   erlangCookie: secretcookie
-replicaCount: 1
-service:
-  type: ClusterIP

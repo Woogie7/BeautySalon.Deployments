@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  serviceName: {{ .Release.Name }}
+  replicas: { { .Values.replicaCount } }
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: rabbitmq
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: { { .Values.image.pullPolicy } }
+          ports:
+            - containerPort: { { .Values.service.port } }
+            - containerPort: { { .Values.service.managementPort } }
+          env:
+            - name: RABBITMQ_DEFAULT_USER
+              value: { { .Values.auth.username } }
+            - name: RABBITMQ_DEFAULT_PASS
+              value: { { .Values.auth.password } }
+            - name: RABBITMQ_ERLANG_COOKIE
+              value: { { .Values.auth.erlangCookie } }
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/rabbitmq
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}
