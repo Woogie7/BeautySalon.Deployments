@@ -4,7 +4,12 @@ metadata:
   name: {{ .Release.Name }}
 spec:
   serviceName: {{ .Release.Name }}
-  replicas: { { .Values.replicaCount } }
+  spec:
+    replicas: { { .Values.replicaCount } }
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxUnavailable: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}
