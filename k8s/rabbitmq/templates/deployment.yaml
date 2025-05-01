@@ -17,17 +17,17 @@ spec:
       containers:
         - name: rabbitmq
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: { { .Values.image.pullPolicy } }
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: { { .Values.service.port } }
-            - containerPort: { { .Values.service.managementPort } }
+            - containerPort: {{ .Values.service.port }}
+            - containerPort: {{ .Values.service.managementPort }}
           env:
             - name: RABBITMQ_DEFAULT_USER
-              value: { { .Values.auth.username } }
+              value: {{ .Values.auth.username }}
             - name: RABBITMQ_DEFAULT_PASS
-              value: { { .Values.auth.password } }
+              value: {{ .Values.auth.password }}
             - name: RABBITMQ_ERLANG_COOKIE
-              value: { { .Values.auth.erlangCookie } }
+              value: {{ .Values.auth.erlangCookie }}
           volumeMounts:
             - name: data
               mountPath: /var/lib/rabbitmq

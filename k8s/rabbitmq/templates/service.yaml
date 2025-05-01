@@ -7,8 +7,8 @@ spec:
     app: {{ .Release.Name }}
   ports:
     - name: amqp
-      port: { { .Values.service.port } }
+      port: {{ .Values.service.port }}
     - name: management
-      port: { { .Values.service.managementPort } }
+      port: {{ .Values.service.managementPort }}
   type: {{ .Values.service.type }}
 
