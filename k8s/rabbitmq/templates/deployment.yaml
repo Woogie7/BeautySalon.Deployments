@@ -5,11 +5,7 @@ metadata:
 spec:
   serviceName: {{ .Release.Name }}
   spec:
-    replicas: { { .Values.replicaCount } }
-    strategy:
-      type: RollingUpdate
-      rollingUpdate:
-        maxUnavailable: 1
+    replicas: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}
