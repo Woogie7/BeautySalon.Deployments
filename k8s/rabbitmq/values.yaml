@@ -1,6 +1,6 @@
 image:
   repository: rabbitmq
-  tag: "3.12-management"
+  tag: "4.1.0-management"
   pullPolicy: IfNotPresent
 
 service:
