@@ -8,15 +8,9 @@ spec:
     name: in-cluster
     namespace: default
   source:
-    repoURL: "https://charts.bitnami.com/bitnami"
-    chart: rabbitmq
-    targetRevision: 16.0.1
-    helm:
-      valueFiles:
-        - ../../k8s/rabbitmq/values.yaml 
-      parameters:
-        - name: fullnameOverride
-          value: rabbitmq
+    repoURL: https://github.com/bitnami/charts.git
+    path: bitnami/rabbitmq
+    targetRevision: main # или конкретный тег/commit
   project: default
   syncPolicy:
     automated:
