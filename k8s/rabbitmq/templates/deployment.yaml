@@ -4,8 +4,7 @@ metadata:
   name: {{ .Release.Name }}
 spec:
   serviceName: {{ .Release.Name }}
-  spec:
-    replicas: 1
+  replicas: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}
