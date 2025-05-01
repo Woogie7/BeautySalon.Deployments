@@ -8,9 +8,9 @@ spec:
     name: in-cluster
     namespace: default
   source:
-    repoURL: "https://charts.bitnami.com/bitnami/rabbitmq-16.0.1.tgz"
+    repoURL: "https://charts.bitnami.com/bitnami"
     chart: rabbitmq
-    targetRevision: "16.0.1"
+    targetRevision: 16.0.1
     helm:
       valueFiles:
         - ../../k8s/rabbitmq/values.yaml 
