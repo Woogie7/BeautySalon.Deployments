@@ -7,12 +7,7 @@ service:
   type: ClusterIP
   port: 5672
   managementPort: 15672
-
-persistence:
-  enabled: true
-  size: 8Gi
-  storageClass: "standard"
-
+  
 resources:
   requests:
     memory: "512Mi"
