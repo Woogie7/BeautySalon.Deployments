@@ -1,15 +1,19 @@
 redis:
   enabled: true
   password: guest
+  
 postgres:
   user: postgres
   password: 1234
   database: BeautySalonBookingDb
-image:
-  repository: woogie42/beautysalon.booking.api
-  tag: f19f1be7ef6258252599e545697a4c302dba42f9
-
+  
 persistence:
   enabled: true
   size: 5Gi
   storageClass: hostpath
+  
+image:
+  repository: woogie42/beautysalon.booking.api
+  tag: f19f1be7ef6258252599e545697a4c302dba42f9
+
+
