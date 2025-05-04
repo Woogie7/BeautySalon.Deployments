@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: booking-service
+  namespace: default
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./k8s/bookingHelm  # Путь к Helm-чарту в репозитории
+      sourceRef:
+        kind: GitRepository
+        name: beauty-salon-repo
+      interval: 1m
+  valuesFrom:
+    - kind: ConfigMap
+      name: booking-service-values  # ConfigMap с кастомными values
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
