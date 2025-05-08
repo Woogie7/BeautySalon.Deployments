@@ -12,12 +12,3 @@ spec:
   path: ./fluxcd/helm-release
   prune: true
   targetNamespace: default
-  syncPolicy:
-    automated:
-      prune: true
-      retry:
-        limit: 3
-        backoff:
-          duration: "5s"
-          factor: 2
-          maxDuration: "30s"
