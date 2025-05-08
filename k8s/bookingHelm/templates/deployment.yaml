@@ -9,6 +9,8 @@ spec:
       app: {{ .Release.Name }}
   template:
     metadata:
+      annotations:
+        checksum/image-tag: "{{ .Values.image.tag }}"
       labels:
         app: {{ .Release.Name }}
     spec:
