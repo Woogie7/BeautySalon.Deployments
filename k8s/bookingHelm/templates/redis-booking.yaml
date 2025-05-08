@@ -17,7 +17,7 @@ spec:
           image: redis:7
           command: ["redis-server", "--requirepass guest"]
           ports:
-            - containerPort: "{{ .Values.redis.port }}"
+            - containerPort: {{ .Values.redis.port }}
 ---
 apiVersion: v1
 kind: Service
@@ -25,7 +25,7 @@ metadata:
   name: {{ .Release.Name }}-redis
 spec:
   ports:
-    - port: "{{ .Values.redis.port }}"
+    - port: {{ .Values.redis.port }}
   selector:
     app: {{ .Release.Name }}-redis
 
