@@ -4,10 +4,5 @@ metadata:
   name: beautysalon-booking-api
   namespace: default
 spec:
-  interval: 1m0s
-  sourceRef:
-    kind: GitRepository
-    name: beauty-salon-repo
-    namespace: flux-system
-  image: woogie42/beautysalon.booking.api
-  
+  interval: 1m0s # Интервал проверки образов
+  image: woogie42/beautysalon.booking.api # Название образа
