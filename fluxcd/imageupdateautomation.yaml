@@ -1,0 +1,27 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: beautysalon-booking-api-update
+  namespace: default
+spec:
+  git:
+    checkout:
+      ref: main
+    commit:
+      author:
+        email: flux@example.com
+        name: flux
+    repositoryRef:
+      name: beauty-salon-repo
+  schedule: "*/5 * * * *" # Каждые 5 минут
+  sourceRefs:
+    - kind: GitRepository
+      name: beauty-salon-repo
+  update:
+    strategy: Setters
+    setters:
+      - name: IMAGE_TAG
+        valueFrom:
+          imageMetadata:
+            name: woogie42/beautysalon.booking.api
+            tag: latest

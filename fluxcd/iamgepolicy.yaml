@@ -1,0 +1,11 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: beautysalon-booking-api-policy
+  namespace: default
+spec:
+  imageRepositoryRef:
+    name: beautysalon-booking-api
+  filter:
+    tag:
+      pattern: '^[0-9a-f]{40}$' # Регулярное выражение для SHA-хэшей (например, git commit hash)

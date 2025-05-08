@@ -12,3 +12,11 @@ spec:
         kind: GitRepository
         name: beauty-salon-repo
         namespace: flux-system
+  values:
+    image:
+      repository: woogie42/beautysalon.booking.api
+      tag: 19868c2636ea293b827a455cc3509191ec9a873f
+  setters:
+    - name: IMAGE_TAG
+      key: image.tag
+      value: ""
