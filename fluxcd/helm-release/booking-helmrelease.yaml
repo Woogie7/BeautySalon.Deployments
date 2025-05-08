@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: booking-service
+  namespace: default
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: ./k8s/bookingHelm
+      sourceRef:
+        kind: GitRepository
+        name: beauty-salon-repo
+        namespace: flux-system
