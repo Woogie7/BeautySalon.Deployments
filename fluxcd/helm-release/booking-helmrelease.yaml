@@ -12,5 +12,3 @@ spec:
         kind: GitRepository
         name: beauty-salon-repo
         namespace: flux-system
-  valuesFiles:
-    - values.yaml
