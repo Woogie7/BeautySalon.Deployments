@@ -1,22 +1,16 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta1
+apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageUpdateAutomation
 metadata:
   name: beautysalon-booking-api-update
   namespace: default
 spec:
+  sourceRef:
+    kind: GitRepository
+    name: beauty-salon-repo
   git:
-    checkout:
-      ref: main
-    commit:
-      author:
-        email: flux@example.com
-        name: flux
-    repositoryRef:
-      name: beauty-salon-repo
-  schedule: "*/5 * * * *" # Каждые 5 минут
-  sourceRefs:
-    - kind: GitRepository
-      name: beauty-salon-repo
+    ref:
+      branch: main
+  interval: 1m0s # Интервал проверки
   update:
     strategy: Setters
     setters:

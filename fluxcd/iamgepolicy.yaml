@@ -6,6 +6,7 @@ metadata:
 spec:
   imageRepositoryRef:
     name: beautysalon-booking-api
-  filter:
+  policy:
     tag:
-      pattern: '^[0-9a-f]{40}$' # Регулярное выражение для SHA-хэшей (например, git commit hash)
+      kind: semver # Или 'regex' для регулярных выражений
+      pattern: '^[0-9a-f]{40}$' # Регулярное выражение для SHA-хэшей
