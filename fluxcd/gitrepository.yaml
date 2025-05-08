@@ -1,12 +1,12 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v2
 kind: GitRepository
 metadata:
   name: beauty-salon-repo
   namespace: flux-system
 spec:
   interval: 1m0s
-  url: git@github.com:Woogie7/BeautySalon.Deployments.git
-  ref:
-    branch: main
+  url: ssh://git@github.com/Woogie7/BeautySalon.Deployments.git
   secretRef:
     name: flux-git-deploy
+  ref:
+    branch: main

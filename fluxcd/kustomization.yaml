@@ -1,0 +1,14 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v2
+kind: Kustomization
+metadata:
+  name: beauty-salon-kustomization
+  namespace: flux-system
+spec:
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: beauty-salon-repo
+    namespace: flux-system
+  path: ./fluxcd/helm-release
+  prune: true
+  targetNamespace: default
