@@ -7,8 +7,13 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: ./k8s/bookingHelm
-      sourceRef:
-        kind: GitRepository
-        name: beauty-salon-repo
-        namespace: flux-system
+      chart:
+        spec:
+          chart: ./k8s/bookingHelm
+          sourceRef:
+            kind: GitRepository
+            name: beauty-salon-repo
+            namespace: flux-system
+      valuesFiles:
+        - values.yaml
+    
