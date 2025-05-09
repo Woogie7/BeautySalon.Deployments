@@ -2,7 +2,7 @@ apiVersion: v2
 name       : AppBookingApiHelmChart
 description: My api booking service
 type       : application
-version    : 0.1.0
+version    : 0.1.2
 keywords:
   - apache
   - http
