@@ -1,7 +1,7 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageUpdateAutomation
 metadata:
-  name: beautysalon-booking-api-update
+  name: beautysalon-employees-api-update
   namespace: flux-system
 spec:
   interval: 1m0s
@@ -18,7 +18,7 @@ spec:
         name: fluxcdbot
       messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
     push:
-      branch: main 
+      branch: main
   update:
-    path: k8s/bookingHelm/values.yaml
+    path: .k8s/employeesHelm/values.yaml
     strategy: Setters
