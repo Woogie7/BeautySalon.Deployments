@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/instance: "beauty-salon-employees"
+    app.kubernetes.io/instance: "beauty-salon-booking"
   name: {{ .Release.Name }}-postgres
 spec:
   replicas: 1
