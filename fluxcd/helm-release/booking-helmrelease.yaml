@@ -1,10 +1,9 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: booking-service
   namespace: default
 spec:
-  interval: 5m
   chart:
     spec:
       chart: ./k8s/bookingHelm
@@ -14,3 +13,6 @@ spec:
         namespace: flux-system
       valuesFiles:
         - values.yaml
+      reconcileStrategy: Revision  
+  interval: 5m
+

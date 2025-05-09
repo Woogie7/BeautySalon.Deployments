@@ -1,7 +1,6 @@
 redis:
   enabled: true
   password: guest
-  port: 6377
 persistence:
   enabled: true
   size: 5Gi
