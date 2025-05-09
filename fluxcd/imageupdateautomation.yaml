@@ -2,7 +2,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageUpdateAutomation
 metadata:
   name: beautysalon-booking-api-update
-  namespace: default
+  namespace: flux-system
 spec:
   interval: 1m0s
   sourceRef:
@@ -20,5 +20,5 @@ spec:
     push:
       branch: main 
   update:
-    path: bookingHelm/values.yaml
+    path: k8s/bookingHelm/values.yaml
     strategy: Setters

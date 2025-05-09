@@ -2,7 +2,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
   name: beautysalon-booking-api-policy
-  namespace: default
+  namespace: flux-system
 spec:
   imageRepositoryRef:
     name: beautysalon-booking-api
