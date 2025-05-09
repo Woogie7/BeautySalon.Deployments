@@ -32,6 +32,6 @@ spec:
       volumes:
         - name: postgres-employees-pvc
           persistentVolumeClaim:
-            claimName: postgres-pvc
+            claimName: postgres-employees-pvc
           
           
