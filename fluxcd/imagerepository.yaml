@@ -4,5 +4,5 @@ metadata:
   name: beautysalon-booking-api
   namespace: default
 spec:
-  interval: 1m0s # Интервал проверки образов
-  image: woogie42/beautysalon.booking.api # Название образа
+  interval: 1m0s 
+  image: woogie42/beautysalon.booking.api

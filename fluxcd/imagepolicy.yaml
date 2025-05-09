@@ -6,7 +6,9 @@ metadata:
 spec:
   imageRepositoryRef:
     name: beautysalon-booking-api
+  filterTags:
+    pattern: '^[a-f0-9]+-(?P<ts>[0-9]+)$'
+    extract: '$ts'
   policy:
-    tag:
-      kind: semver # Или 'regex' для регулярных выражений
-      pattern: '^[0-9a-f]{40}$' # Регулярное выражение для SHA-хэшей
+    numerical:
+      order: asc

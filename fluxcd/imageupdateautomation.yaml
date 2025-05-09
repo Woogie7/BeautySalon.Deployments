@@ -4,18 +4,21 @@ metadata:
   name: beautysalon-booking-api-update
   namespace: default
 spec:
+  interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: beauty-salon-repo
   git:
-    ref:
-      branch: main
-  interval: 1m0s # Интервал проверки
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+    push:
+      branch: main 
   update:
+    path: bookingHelm/values.yaml
     strategy: Setters
-    setters:
-      - name: IMAGE_TAG
-        valueFrom:
-          imageMetadata:
-            name: woogie42/beautysalon.booking.api
-            tag: latest
