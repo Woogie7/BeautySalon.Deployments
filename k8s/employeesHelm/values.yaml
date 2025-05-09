@@ -1,3 +1,14 @@
+redis:
+  enabled: true
+  password: guest
+persistence:
+  enabled: true
+  size: 5Gi
+  storageClass: hostpath
+postgres:
+  user: postgres
+  password: 1234
+  database: EmployeesSalonBookingDb
 image:
   repository: woogie42/beautysalon.employees.api
   tag: 4c1049c510674475f219d99bb9a53db8523819d6
