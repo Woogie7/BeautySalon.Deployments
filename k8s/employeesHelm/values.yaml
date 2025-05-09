@@ -8,7 +8,7 @@ persistence:
 postgres:
   user: postgres
   password: 1234
-  database: EmployeesSalonBookingDb
+  database: BeautySalonEmployeesDb
 image:
   repository: woogie42/beautysalon.employees.api
   tag: 4c1049c510674475f219d99bb9a53db8523819d6
