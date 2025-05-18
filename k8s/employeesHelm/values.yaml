@@ -11,4 +11,4 @@ postgres:
   database: BeautySalonEmployeesDb
 image:
   repository: woogie42/beautysalon.employees.api
-  tag: 973369329af8c9b0422abb4a8a3a579b5e078c63-132
+  tag: ab0b25f7725dce10243a62aa04ea7f9a1e8ca1ee-134
