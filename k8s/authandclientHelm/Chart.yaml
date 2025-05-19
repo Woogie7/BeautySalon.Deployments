@@ -1,0 +1,9 @@
+apiVersion: v2
+name       : AppAuthandClientApiHelmChart
+description: My api Auth and client service
+type       : application
+version    : 0.1.0
+keywords:
+  - apache
+  - http
+  - https

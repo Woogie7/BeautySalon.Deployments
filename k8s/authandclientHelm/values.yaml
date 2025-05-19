@@ -1,0 +1,14 @@
+redis:
+  enabled: true
+  password: guest
+persistence:
+  enabled: true
+  size: 5Gi
+  storageClass: hostpath
+postgres:
+  user: postgres
+  password: 1234
+  database: BeautySalonAuthandClientdb
+image:
+  repository: woogie42/beautysalon.authandclient.api
+  tag: 
