@@ -11,4 +11,4 @@ postgres:
   database: BeautySalonAuthandClientdb
 image:
   repository: woogie42/beautysalon.authandclient.api
-  tag: 707c93d2c101c4c3ec01e0bd7b750845720484a5-13
+  tag: d472c448f1d5bf8d2299f702ee309c23c720862f-14
