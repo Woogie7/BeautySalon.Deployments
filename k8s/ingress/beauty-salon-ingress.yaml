@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: beauty-salon-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: beauty.local
+      http:
+        paths:
+          - path: /auth
+            pathType: Prefix
+            backend:
+              service:
+                name: authandclient-service-service
+                port:
+                  number: 80
+          - path: /booking
+            pathType: Prefix
+            backend:
+              service:
+                name: booking-service-service
+                port:
+                  number: 80
+          - path: /employees
+            pathType: Prefix
+            backend:
+              service:
+                name: employees-service-service
+                port:
+                  number: 80
